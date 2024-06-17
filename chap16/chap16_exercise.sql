@@ -1,15 +1,15 @@
---16-1 PL/SQL ±∏¡∂
+--16-1 PL/SQL Íµ¨Ï°∞
 
-SET SERVEROUTPUT ON;					 --»≠∏Èø° √‚∑¬ »∞º∫»≠
+SET SERVEROUTPUT ON;					 --ÌôîÎ©¥Ïóê Ï∂úÎ†• ÌôúÏÑ±Ìôî
 
 BEGIN
 	DBMS_OUTPUT.PUT_LINE('Hello, PL/SQL!');
 END;
 
 
--- ¡÷ºÆ ªÁøÎ«œ±‚
+-- Ï£ºÏÑù ÏÇ¨Ïö©ÌïòÍ∏∞
 DECLARE
---	∫Øºˆ¿Ã∏ß		¿⁄∑·«¸				¥Î¿‘ø¨ªÍ¿⁄	∞™ ∂«¥¬ ∞™¿Ã µµ√‚µ«¥¬ ø©∑Ø «•«ˆΩƒ;
+--	Î≥ÄÏàòÏù¥Î¶Ñ		ÏûêÎ£åÌòï				ÎåÄÏûÖÏó∞ÏÇ∞Ïûê	Í∞í ÎòêÎäî Í∞íÏù¥ ÎèÑÏ∂úÎêòÎäî Ïó¨Îü¨ ÌëúÌòÑÏãù;
 	V_EMPNO NUMBER(4) 	:=		7788;
 	V_ENAME VARCHAR2(10);
 BEGIN
@@ -21,8 +21,8 @@ BEGIN
 END;
 /
 
---	ªÛºˆ∏¶ º±æ«“ ∂ß ¿⁄πŸ¥¬ FINAL // SQL¿∫ CONSTANT
--- ªÛºˆø° ∞™¿ª ¥Î¿‘«— »ƒ √‚∑¬«œ±‚
+--	ÏÉÅÏàòÎ•º ÏÑ†Ïñ∏Ìï† Îïå ÏûêÎ∞îÎäî FINAL // SQLÏùÄ CONSTANT
+-- ÏÉÅÏàòÏóê Í∞íÏùÑ ÎåÄÏûÖÌïú ÌõÑ Ï∂úÎ†•ÌïòÍ∏∞
 DECLARE
 	V_TAX		CONSTANT		NUMBER(1)	:=		3;
 BEGIN
@@ -31,54 +31,54 @@ END;
 /
 
 
--- ∫Øºˆ¿« ∞™ ¿˙¿Â«œ±‚
+-- Î≥ÄÏàòÏùò Í∞í Ï†ÄÏû•ÌïòÍ∏∞
 DECLARE
-	V_DEPTNO NUMBER(2)	DEFAULT 10;		-- ±‚∫ª∞™ 10 º≥¡§
+	V_DEPTNO NUMBER(2)	DEFAULT 10;		-- Í∏∞Î≥∏Í∞í 10 ÏÑ§Ï†ï
 BEGIN
 	DBMS_OUTPUT.PUT_LINE('V_DEPTNO		:	'	||	V_DEPTNO);
 END;
 /
 
--- ∫Øºˆø° NOT NULL º≥¡§«œ∞Ì ∞™¿ª ¥Î¿‘«œ∞Ì √‚∑¬«œ±‚
+-- Î≥ÄÏàòÏóê NOT NULL ÏÑ§Ï†ïÌïòÍ≥† Í∞íÏùÑ ÎåÄÏûÖÌïòÍ≥† Ï∂úÎ†•ÌïòÍ∏∞
 DECLARE
-	V_DEPTNO	NUMBER(2) NOT NULL := 10;	-- ±‚∫ª∞™ 10 º≥¡§
+	V_DEPTNO	NUMBER(2) NOT NULL := 10;	-- Í∏∞Î≥∏Í∞í 10 ÏÑ§Ï†ï
 BEGIN
 	DBMS_OUTPUT.PUT_LINE('V_DEPTNO		:	'	||	V_DEPTNO);
 END;
 /
 
--- NOT NULL ∞˙ DEFAULT ∞∞¿Ã º≥¡§
+-- NOT NULL Í≥º DEFAULT Í∞ôÏù¥ ÏÑ§Ï†ï
 DECLARE
-	V_DEPTNO	NUMBER(2) NOT NULL DEFAULT 10;	-- ±‚∫ª∞™ 10 º≥¡§
+	V_DEPTNO	NUMBER(2) NOT NULL DEFAULT 10;	-- Í∏∞Î≥∏Í∞í 10 ÏÑ§Ï†ï
 BEGIN
 	DBMS_OUTPUT.PUT_LINE('V_DEPTNO		:	'	||	V_DEPTNO);
 END;
 /
 
 DECLARE
-	V_DEPTNO	NUMBER(2) NOT NULL DEFAULT 10;	-- ±‚∫ª∞™ 10 º≥¡§
+	V_DEPTNO	NUMBER(2) NOT NULL DEFAULT 10;	-- Í∏∞Î≥∏Í∞í 10 ÏÑ§Ï†ï
 BEGIN
-	DBMS_OUTPUT.PUT_LINE('V_DEPTNO		:	'	||	v_deptno);		-- ¿⁄πŸøÕ ¥Ÿ∏£∞‘ sql¿∫ ¥Îº“πÆ¿⁄ ±∏∫–¿ª «œ¡ˆ æ ¿Ω
+	DBMS_OUTPUT.PUT_LINE('V_DEPTNO		:	'	||	v_deptno);		-- ÏûêÎ∞îÏôÄ Îã§Î•¥Í≤å sqlÏùÄ ÎåÄÏÜåÎ¨∏Ïûê Íµ¨Î∂ÑÏùÑ ÌïòÏßÄ ÏïäÏùå
 END;
 /
 	
--- Ωƒ∫∞¿⁄ ¿Ã∏ß ∫Ÿ¿Ã¥¬ ±‘ƒ¢
---		¥Îº“πÆ¿⁄∏¶ ±∏∫∞«œ¡ˆ æ ¿Ω
---		∞∞¿∫ ∫Ì∑∞ æ»ø°º≠ Ωƒ∫∞¿⁄¥¬ ∞Ì¿Ø«ÿæﬂ «œ∏Á ¡ﬂ∫π ∫“∞°
---			πÆ¿⁄∑Œ Ω√¿€, 30byte±Ó¡ˆ ªÁøÎ∞°¥…
+-- ÏãùÎ≥ÑÏûê Ïù¥Î¶Ñ Î∂ôÏù¥Îäî Í∑úÏπô
+--		ÎåÄÏÜåÎ¨∏ÏûêÎ•º Íµ¨Î≥ÑÌïòÏßÄ ÏïäÏùå
+--		Í∞ôÏùÄ Î∏îÎü≠ ÏïàÏóêÏÑú ÏãùÎ≥ÑÏûêÎäî Í≥†Ïú†Ìï¥Ïïº ÌïòÎ©∞ Ï§ëÎ≥µ Î∂àÍ∞Ä
+--			Î¨∏ÏûêÎ°ú ÏãúÏûë, 30byteÍπåÏßÄ ÏÇ¨Ïö©Í∞ÄÎä•
 
---	∫Øºˆ¿« ¿⁄∑·«¸	(¡ﬂø‰)
---	Ω∫ƒÆ∂Û	:	º˝¿⁄, πÆ¿⁄ø≠, ≥Ø¬• µÓ∞˙ ∞∞¿Ã ø¿∂Û≈¨ø°º≠ ±‚∫ª¿∏∑Œ ¡§¿««ÿ ≥ı¿∫ ¿⁄∑·«¸
---	¬¸¡∂«¸	: 	∆Ø¡§ ≈◊¿Ã∫Ì¿« ø≠¿« ¿⁄∑·«¸¿Ã≥™ «œ≥™¿« «‡ ±∏¡∂∏¶ ¬¸¡∂
+--	Î≥ÄÏàòÏùò ÏûêÎ£åÌòï	(Ï§ëÏöî)
+--	Ïä§ÏπºÎùº	:	Ïà´Ïûê, Î¨∏ÏûêÏó¥, ÎÇ†Ïßú Îì±Í≥º Í∞ôÏù¥ Ïò§ÎùºÌÅ¥ÏóêÏÑú Í∏∞Î≥∏ÏúºÎ°ú Ï†ïÏùòÌï¥ ÎÜìÏùÄ ÏûêÎ£åÌòï
+--	Ï∞∏Ï°∞Ìòï	: 	ÌäπÏ†ï ÌÖåÏù¥Î∏îÏùò Ïó¥Ïùò ÏûêÎ£åÌòïÏù¥ÎÇò ÌïòÎÇòÏùò Ìñâ Íµ¨Ï°∞Î•º Ï∞∏Ï°∞
 
 DECLARE
 	V_DEPTNO		DEPT.DEPTNO%TYPE	:=		50;
 BEGIN
-	DBMS_OUTPUT.PUT_LINE('V_DEPTNO		:	'	||	v_deptno);		-- ¿⁄πŸøÕ ¥Ÿ∏£∞‘ sql¿∫ ¥Îº“πÆ¿⁄ ±∏∫–¿ª «œ¡ˆ æ ¿Ω
+	DBMS_OUTPUT.PUT_LINE('V_DEPTNO		:	'	||	v_deptno);		-- ÏûêÎ∞îÏôÄ Îã§Î•¥Í≤å sqlÏùÄ ÎåÄÏÜåÎ¨∏Ïûê Íµ¨Î∂ÑÏùÑ ÌïòÏßÄ ÏïäÏùå
 END;
 /
 
---16-10	-- ∫πΩ¿ « ø‰
+--16-10	-- Î≥µÏäµ ÌïÑÏöî
 DECLARE
 	V_DEPT_ROW DEPT%ROWTYPE;
 BEGIN
@@ -94,18 +94,18 @@ END;
 
 SELECT * FROM DEPT WHERE DEPTNO = 40;
 
--- 16-3 ¡∂∞« ¡¶æÓπÆ			IFπÆ CASE πÆ ªÁøÎ ∞°¥…
---	IF	-	THEN πÆ
--- END IF;				- -≥°≥Ø∂ß ªÁøÎ
+-- 16-3 Ï°∞Í±¥ Ï†úÏñ¥Î¨∏			IFÎ¨∏ CASE Î¨∏ ÏÇ¨Ïö© Í∞ÄÎä•
+--	IF	-	THEN Î¨∏
+-- END IF;				- -ÎÅùÎÇ†Îïå ÏÇ¨Ïö©
 -- IFELSIF
---	ELSIF	¡∂∞«Ωƒ  THEN
+--	ELSIF	Ï°∞Í±¥Ïãù  THEN
 
--- ∫Øºˆø° ¿‘∑¬µ» ∞™¿Ã »¶ºˆ ¿Œ¡ˆ æÀæ∆∫∏±‚
+-- Î≥ÄÏàòÏóê ÏûÖÎ†•Îêú Í∞íÏù¥ ÌôÄÏàò Ïù∏ÏßÄ ÏïåÏïÑÎ≥¥Í∏∞
 DECLARE
 	V_NUMBER	NUMBER	:=		14;
 BEGIN
 	IF MOD(V_NUMBER, 2)	=	1 THEN
-		DBMS_OUTPUT.PUT_LINE('V_NUMBER ¥¬ »¶ºˆ ¿‘¥œ¥Ÿ.');
+		DBMS_OUTPUT.PUT_LINE('V_NUMBER Îäî ÌôÄÏàò ÏûÖÎãàÎã§.');
 	END IF;
 END;
 /
@@ -114,25 +114,25 @@ DECLARE
 	V_NUMBER	NUMBER	:=		14;
 BEGIN
 	IF MOD(V_NUMBER, 2)	=	1 THEN
-		DBMS_OUTPUT.PUT_LINE('V_NUMBER ¥¬ »¶ºˆ ¿‘¥œ¥Ÿ.');
+		DBMS_OUTPUT.PUT_LINE('V_NUMBER Îäî ÌôÄÏàò ÏûÖÎãàÎã§.');
 	ELSE
-		DBMS_OUTPUT.PUT_LINE('V_NUMBER ¥¬ ¬¶ºˆ ¿‘¥œ¥Ÿ.');
+		DBMS_OUTPUT.PUT_LINE('V_NUMBER Îäî ÏßùÏàò ÏûÖÎãàÎã§.');
 	END IF;
 END;
 /
 
--- ¿‘∑¬«— ¡°ºˆ∞° æÓ¥¿ «–¡ª¿Œ¡ˆ √‚∑¬«œ±‚
+-- ÏûÖÎ†•Ìïú Ï†êÏàòÍ∞Ä Ïñ¥Îäê ÌïôÏ¢ÄÏù∏ÏßÄ Ï∂úÎ†•ÌïòÍ∏∞
 DECLARE
 	V_SCORE NUMBER := 87;
 BEGIN
 	IF V_SCORE >= 90 THEN
-		DBMS_OUTPUT.PUT_LINE('A«–¡°');
+		DBMS_OUTPUT.PUT_LINE('AÌïôÏ†ê');
 	ELSIF V_SCORE >=80 THEN
-		DBMS_OUTPUT.PUT_LINE('B«–¡°');
+		DBMS_OUTPUT.PUT_LINE('BÌïôÏ†ê');
 	ELSIF V_SCORE >=70 THEN
-		DBMS_OUTPUT.PUT_LINE('C«–¡°');
+		DBMS_OUTPUT.PUT_LINE('CÌïôÏ†ê');
 	ELSIF V_SCORE >=60 THEN
-		DBMS_OUTPUT.PUT_LINE('D«–¡°');
+		DBMS_OUTPUT.PUT_LINE('DÌïôÏ†ê');
 	END IF;
 		
 END;
@@ -141,7 +141,7 @@ END;
 
 
 
--- πÆ¡¶ 1) ¡˜ø¯π¯»£∞° 7900¿Œ ¡˜ø¯¡§∫∏∏¶ √‚∑¬«ÿ∫∏ººø‰
+-- Î¨∏Ï†ú 1) ÏßÅÏõêÎ≤àÌò∏Í∞Ä 7900Ïù∏ ÏßÅÏõêÏ†ïÎ≥¥Î•º Ï∂úÎ†•Ìï¥Î≥¥ÏÑ∏Ïöî
 DECLARE
 	V_NO			EMP.EMPNO%TYPE;
 	V_NAME	EMP.ENAME%TYPE;
@@ -151,13 +151,13 @@ BEGIN
 		INTO V_NO, V_NAME, V_SAL
 	FROM EMP
 	WHERE EMPNO = 7900;
-	DBMS_OUTPUT.PUT_LINE('¡˜ø¯π¯»£∞° 7900 ¿Œ ¡˜ø¯¡§∫∏		:	' || V_NO	||'    ' || V_NAME|| '    ' || V_SAL);
+	DBMS_OUTPUT.PUT_LINE('ÏßÅÏõêÎ≤àÌò∏Í∞Ä 7900 Ïù∏ ÏßÅÏõêÏ†ïÎ≥¥		:	' || V_NO	||'    ' || V_NAME|| '    ' || V_SAL);
 END;
 /
 
 
 
--- πÆ¡¶2 ¡˜ø¯¡§∫∏∞° 7900¿Œ ¡˜ø¯¡§∫∏∏¶ ROWTYPE ∫Øºˆ∏¶ »∞øÎ«œø© µ•¿Ã≈Õ √‚∑¬«ÿ∫∏ººø‰
+-- Î¨∏Ï†ú2 ÏßÅÏõêÏ†ïÎ≥¥Í∞Ä 7900Ïù∏ ÏßÅÏõêÏ†ïÎ≥¥Î•º ROWTYPE Î≥ÄÏàòÎ•º ÌôúÏö©ÌïòÏó¨ Îç∞Ïù¥ÌÑ∞ Ï∂úÎ†•Ìï¥Î≥¥ÏÑ∏Ïöî
 DECLARE
 	V_EMP_ROW EMP%ROWTYPE;
 BEGIN
@@ -165,9 +165,9 @@ BEGIN
 		INTO V_EMP_ROW
 	  FROM EMP
 	WHERE EMPNO = 7900;
-	DBMS_OUTPUT.PUT_LINE('¡˜ø¯ π¯»£		:	' || V_EMP_ROW.EMPNO);
-	DBMS_OUTPUT.PUT_LINE('¡˜ø¯ ¿Ã∏ß		:	' || V_EMP_ROW.ENAME);
-	DBMS_OUTPUT.PUT_LINE('¡˜ø¯ ±ﬁø©		:	' || V_EMP_ROW.SAL);
+	DBMS_OUTPUT.PUT_LINE('ÏßÅÏõê Î≤àÌò∏		:	' || V_EMP_ROW.EMPNO);
+	DBMS_OUTPUT.PUT_LINE('ÏßÅÏõê Ïù¥Î¶Ñ		:	' || V_EMP_ROW.ENAME);
+	DBMS_OUTPUT.PUT_LINE('ÏßÅÏõê Í∏âÏó¨		:	' || V_EMP_ROW.SAL);
 END;
 /
 SELECT * FROM EMP WHERE EMPNO = 7900;
@@ -175,7 +175,7 @@ SELECT * FROM EMP WHERE EMPNO = 7900;
 
 
 
--- πÆ 3 EMP, DEPT ¡∂¿Œ«ÿº≠ EMPNO 7900¿Œ ªÁ∂˜¿« ¡§∫∏∏¶ √‚∑¬«ÿ∫∏ººø‰
+-- Î¨∏ 3 EMP, DEPT Ï°∞Ïù∏Ìï¥ÏÑú EMPNO 7900Ïù∏ ÏÇ¨ÎûåÏùò Ï†ïÎ≥¥Î•º Ï∂úÎ†•Ìï¥Î≥¥ÏÑ∏Ïöî
 
 DECLARE
 	V_EMPNO	EMP.EMPNO%TYPE;
@@ -209,18 +209,18 @@ BEGIN
 	FROM EMP
 	WHERE EMPNO = 7369;
 	IF V_SAL >= 10000 THEN
-		V_LEVEL := 'ªÛ';
+		V_LEVEL := 'ÏÉÅ';
 	ELSIF V_SAL >= 5000 THEN
-		V_LEVEL := '¡ﬂ';
+		V_LEVEL := 'Ï§ë';
 	ELSE
-		V_LEVEL := '«œ';
+		V_LEVEL := 'Ìïò';
 	END IF;
 	DBMS_OUTPUT.PUT_LINE(V_LEVEL);
 END;
 /
 
 
--- CASE πÆ ªÁøÎ
+-- CASE Î¨∏ ÏÇ¨Ïö©
 DECLARE
 	V_SCORE NUMBER :=87;
 BEGIN
@@ -245,13 +245,171 @@ DECLARE
 	V_SCORE	NUMBER	:= 87;
 BEGIN
 	CASE
-		WHEN V_SCORE >= 90 THEN DBMS_OUTPUT.PUT_LINE('A «–¡°');
-		WHEN V_SCORE >= 80 THEN DBMS_OUTPUT.PUT_LINE('B «–¡°');
-		WHEN V_SCORE >= 70 THEN DBMS_OUTPUT.PUT_LINE('C «–¡°');
-		WHEN V_SCORE >= 60 THEN DBMS_OUTPUT.PUT_LINE('D «–¡°');
-		ELSE 											DBMS_OUTPUT.PUT_LINE('F «–¡°');
+		WHEN V_SCORE >= 90 THEN DBMS_OUTPUT.PUT_LINE('A ÌïôÏ†ê');
+		WHEN V_SCORE >= 80 THEN DBMS_OUTPUT.PUT_LINE('B ÌïôÏ†ê');
+		WHEN V_SCORE >= 70 THEN DBMS_OUTPUT.PUT_LINE('C ÌïôÏ†ê');
+		WHEN V_SCORE >= 60 THEN DBMS_OUTPUT.PUT_LINE('D ÌïôÏ†ê');
+		ELSE 											DBMS_OUTPUT.PUT_LINE('F ÌïôÏ†ê');
 	END CASE;
 END;
 /
+
+
+
+-- 16 -17
+DECLARE
+	V_NUM NUMBER := 0;		-- Ï¥àÍ∏∞Ïãù
+BEGIN
+	LOOP
+		DBMS_OUTPUT.PUT_LINE('ÌòÑÏû¨ V_NUM : '	||	V_NUM);
+		V_NUM := V_NUM +1;		-- Ï¶ùÍ∞êÏãù
+		EXIT	WHEN V_NUM >4;		-- Ï°∞Í±¥Ïãù
+	END LOOP;
+END;
+/
+
+DECLARE
+	V_NUM NUMBER := 0;		-- Ï¥àÍ∏∞Ïãù
+BEGIN
+	LOOP
+		DBMS_OUTPUT.PUT_LINE('ÌòÑÏû¨ V_NUM : '	||	V_NUM);
+		V_NUM := V_NUM +1;		-- Ï¶ùÍ∞êÏãù
+		-- EXIT	WHEN V_NUM >4;		-- Ï°∞Í±¥Ïãù
+		IF V_NUM > 4 THEN
+			EXIT;
+		END IF;
+	END LOOP;
+END;
+/
+
+
+-- WHILE LOOP
+DECLARE 
+	V_NUM NUMBER := 0;	-- Ï¥àÍ∏∞Ïãù
+BEGIN
+	WHILE V_NUM < 4 LOOP		-- Ï°∞Í±¥Ïãù
+		DBMS_OUTPUT.PUT_LINE('ÌòÑÏû¨ V_NUM : '	||	V_NUM);
+		V_NUM := V_NUM +1;
+	END LOOP;
+END;
+/
+
+-- 16-19	FOR LOOP
+
+BEGIN
+	FOR i IN 0..4	 LOOP		-- 0 Î∂ÄÌÑ∞ 4ÍπåÏßÄ Ìè¨Ìï®		java for(int i = 0; i <=4;, i++){
+		DBMS_OUTPUT.PUT_LINE('ÌòÑÏû¨ i : '	||	i);
+	END LOOP;
+END;
+/
+
+BEGIN
+	FOR i IN Reverse 0..4	 LOOP		-- 4Î∂ÄÌÑ∞ Ï∞çÏùå
+		DBMS_OUTPUT.PUT_LINE('ÌòÑÏû¨ i : '	||	i);
+	END LOOP;
+END;
+/
+-- 16-21	CONTINUE Î¨∏
+BEGIN
+	FOR i IN 0..4 LOOP
+		CONTINUE WHEN	MOD(i,2) = 1;			-- 2Î°ú ÎÇòÎàà ÎÇòÎ®∏ÏßÄÍ∞Ä 1Ïù¥Î©¥ ÏïÑÎûò Î•º Î¨¥ÏãúÌïòÍ≥† ÎÑòÏñ¥Í∞ê
+		DBMS_OUTPUT.PUT_LINE('ÌòÑÏû¨ i : '	||	i);
+	END LOOP;
+
+END;
+/
+
+-- Q1 Ïà´Ïûê 1Î∂ÄÌÑ∞ 10ÍπåÏßÄ Ïà´Ïûê Ï§ë ÌôÄÏàòÎßå Ï∂úÎ†•ÌïòÎäî PL/SQL Î¨∏ ÏûëÏÑ±
+BEGIN
+	FOR	i	IN 0..10 LOOP
+		CONTINUE WHEN MOD (i,2) = 0;
+		DBMS_OUTPUT.PUT_LINE('ÌòÑÏû¨ i Ïùò Í∞í : '	||	i);
+	END LOOP;
+
+END;
+-- WHILE IF LOOP
+DECLARE
+	i	NUMBER	:=	0;
+BEGIN
+	WHILE	i	<	10 LOOP
+		i	:=	i+1;
+		IF	MOD(i,2)	=	0 THEN
+			CONTINUE;
+		END IF;
+			DBMS_OUTPUT.PUT_LINE('ÌòÑÏû¨ i Ïùò Í∞í : '	||	i);
+	END	LOOP;
+END;
+/*
+Q2 DEPT ÌÖåÏù¥Î∏îÏùò DEPTNOÏôÄ ÏûêÎ£åÌòïÏù¥ Í∞ôÏùÄ Î≥ÄÏàò V_DEPTNOÎ•º ÏÑ†Ïñ∏
+Í∑∏Î¶¨Í≥† V_DEPTNO Î≥ÄÏàò Í∞íÏóê 10, 20, 30, 40ÏùÑ ÎåÄÏûÖÌñàÏùÑ Îïå 
+Îã§ÏùåÍ≥º Í∞ôÏù¥ Î∂ÄÏÑú Ïù¥Î¶ÑÏùÑ Ï∂úÎ†•ÌïòÎäî ÌîÑÎ°úÍ∑∏Îû®ÏùÑ ÏûëÏÑ±Ìï¥ Î≥¥ÏÑ∏Ïöî
+Îã®, Î∂ÄÏÑú Î≤àÌò∏Í∞Ä 10, 20, 30, 40Ïù¥ ÏïÑÎãàÎ©¥ N/AÎ°ú Ï∂úÎ†• Ìï† Í≤É
+IFÎ¨∏, CASE Î¨∏ Îëê Í∞ÄÏßÄ Î∞©ÏãùÏúºÎ°ú ÌíÄÏñ¥ Î≥º Í≤É
+*/
+
+DECLARE
+	V_DEPTNO	DEPT.DEPTNO%TYPE :=	10;
+	V_DNAME	DEPT.DNAME%TYPE; 
+BEGIN
+	
+	IF V_DEPTNO = 10 THEN
+		SELECT DNAME INTO V_DNAME FROM DEPT WHERE DEPTNO = 10;
+		DBMS_OUTPUT.PUT_LINE('DNAME	:	'	||	V_DNAME);
+	ELSIF	V_DEPTNO = 20 THEN
+		SELECT DNAME INTO V_DNAME FROM DEPT WHERE DEPTNO = 20;
+		DBMS_OUTPUT.PUT_LINE('DNAME	:	'	||	V_DNAME);
+	ELSIF	V_DEPTNO = 30 THEN
+		SELECT DNAME INTO V_DNAME FROM DEPT WHERE DEPTNO = 30;
+		DBMS_OUTPUT.PUT_LINE('DNAME	:	'	||	V_DNAME);
+	ELSIF	V_DEPTNO = 40 THEN
+		SELECT DNAME INTO V_DNAME FROM DEPT WHERE DEPTNO = 40;
+		DBMS_OUTPUT.PUT_LINE('DNAME	:	'	||	V_DNAME);
+	ELSE
+		DBMS_OUTPUT.PUT_LINE('N/A');
+	END IF;
+END;
+/
+
+-- CASE Î¨∏ÏúºÎ°ú ÌíÄÏóàÏùÑ Îïå
+DECLARE 
+	V_DEPTNO	DEPT.DEPTNO%TYPE :=	50;
+	V_DNAME	DEPT.DNAME%TYPE; 
+BEGIN
+	CASE (V_DEPTNO/10) 
+		WHEN 1 THEN
+			SELECT DNAME INTO V_DNAME FROM DEPT WHERE DEPTNO = 10;
+			DBMS_OUTPUT.PUT_LINE('DNAME	:	'	||	V_DNAME);
+		WHEN 2 THEN
+			SELECT DNAME INTO V_DNAME FROM DEPT WHERE DEPTNO = 20;
+			DBMS_OUTPUT.PUT_LINE('DNAME	:	'	||	V_DNAME);
+		WHEN 3 THEN
+			SELECT DNAME INTO V_DNAME FROM DEPT WHERE DEPTNO = 30;
+			DBMS_OUTPUT.PUT_LINE('DNAME	:	'	||	V_DNAME);
+		WHEN 4 THEN
+			SELECT DNAME INTO V_DNAME FROM DEPT WHERE DEPTNO = 40;
+			DBMS_OUTPUT.PUT_LINE('DNAME	:	'	||	V_DNAME);
+		ELSE
+			DBMS_OUTPUT.PUT_LINE('N/A');
+		END CASE;
+END;
+/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
