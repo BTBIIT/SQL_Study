@@ -1,6 +1,6 @@
 -- HOMEWORK
 SET SERVEROUTPUT ON;				
--- SET SERVEROUTPUT ON ≈◊Ω∫∆Æ
+-- SET SERVEROUTPUT ON ÌÖåÏä§Ìä∏
 /*
 DECLARE
 	TYPE REC_DEPT IS RECORD(
@@ -20,28 +20,28 @@ END;
 /
 */
 
--- 	πÆ¡¶ 5 ) 1∫Œ≈Õ º˝¿⁄¡ﬂ »¶ºˆ 10∞≥∏∏ √‚∑¬«œ±‚
---	(IF  ¡∂∞«πÆ æ¯¿Ã π›∫ππÆ  BASIC LOOP øÕ WHILE LOOP ∞¢∞¢¿« πÊπ˝¿∏∑Œ √‚∑¬«ÿ∫∏ººø‰)
+-- 	Î¨∏Ï†ú 5 ) 1Î∂ÄÌÑ∞ Ïà´ÏûêÏ§ë ÌôÄÏàò 10Í∞úÎßå Ï∂úÎ†•ÌïòÍ∏∞
+--	(IF  Ï°∞Í±¥Î¨∏ ÏóÜÏù¥ Î∞òÎ≥µÎ¨∏  BASIC LOOP ÏôÄ WHILE LOOP Í∞ÅÍ∞ÅÏùò Î∞©Î≤ïÏúºÎ°ú Ï∂úÎ†•Ìï¥Î≥¥ÏÑ∏Ïöî)
 
--- Q1-1. BASIC ∑Á«¡ πÆ¡¶
+-- Q1-1. BASIC Î£®ÌîÑ Î¨∏Ï†ú
 DECLARE
-		V_NUM NUMBER := 1;						-- √ ±‚Ωƒ
+		V_NUM NUMBER := 1;						-- Ï¥àÍ∏∞Ïãù
 		V_COUNT NUMBER := 1;
 BEGIN
 		LOOP
-				EXIT WHEN V_COUNT > 10;		-- ¡∂∞«Ωƒ
+				EXIT WHEN V_COUNT > 10;		-- Ï°∞Í±¥Ïãù
 				DBMS_OUTPUT.PUT_LINE(V_NUM);
 				V_NUM := V_NUM + 2;
 				V_COUNT := V_COUNT +1;
 		END LOOP;
 END;
 /
--- Q-1-2. WHILE ∑Œ «Æ±‚
+-- Q-1-2. WHILE Î°ú ÌíÄÍ∏∞
 DECLARE
-		V_NUM		NUMBER := 1;	-- √ ±‚Ωƒ
+		V_NUM		NUMBER := 1;	-- Ï¥àÍ∏∞Ïãù
 		V_COUNT 	NUMBER := 0;		
 BEGIN
-		WHILE V_COUNT < 10 LOOP -- ¡∂∞«Ωƒ
+		WHILE V_COUNT < 10 LOOP -- Ï°∞Í±¥Ïãù
 		DBMS_OUTPUT.PUT_LINE(V_NUM);
 		V_NUM := V_NUM +2;
 		V_COUNT := V_COUNT + 1;
@@ -49,9 +49,9 @@ BEGIN
 END;
 /
 
---	πÆ¡¶6) ªÁø¯≈◊¿Ã∫Ìø°º≠ 30 π¯ ∫Œº≠¿Œ ªÁø¯¿« ªÁø¯π¯»£, ¿Ã∏ß, ¡˜√• √‚∑¬«œ±‚  (cursor ªÁøÎ)
+--	Î¨∏Ï†ú6) ÏÇ¨ÏõêÌÖåÏù¥Î∏îÏóêÏÑú 30 Î≤à Î∂ÄÏÑúÏù∏ ÏÇ¨ÏõêÏùò ÏÇ¨ÏõêÎ≤àÌò∏, Ïù¥Î¶Ñ, ÏßÅÏ±Ö Ï∂úÎ†•ÌïòÍ∏∞  (cursor ÏÇ¨Ïö©)
 -- (v_emp.EMPNO || '  ' || v_emp.ENAME || '  ' || v_emp.job)
---	1. º±æ OPEN   FETCH CLOSE      2. FOR   IN 
+--	1. ÏÑ†Ïñ∏ OPEN   FETCH CLOSE      2. FOR   IN 
 -- Q2-1
 DECLARE
 		V_EMP EMP%ROWTYPE;
@@ -68,7 +68,7 @@ BEGIN
 END;
 /
 
--- Q2-2 FOR IN ¿ª Ω·º≠ ∏∏µÈ ∞Õ
+-- Q2-2 FOR IN ÏùÑ Ïç®ÏÑú ÎßåÎì§ Í≤É
 DECLARE 
 		V_EMP EMP%ROWTYPE;
 		CURSOR C1 IS 
